@@ -3,17 +3,20 @@ const goats = [
         "id": 1,
         "name": "billy",
          "age": 6,
-         "sex": "M"},
+         "sex": "M",
+         "favColour": "Magenta"},
         {
         "id": 2,
         "name": "Sam",
          "age": 6,
-         "sex": "F"},
+         "sex": "F",
+         "favColour": "Green"},
         {
         "id": 3,
         "name": "Bob",
          "age": 6,
-         "sex": "M"}];
+         "sex": "M",
+         "favColour": "Yellow"}];
 
 let nextId = 4;
 

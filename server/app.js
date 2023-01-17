@@ -15,9 +15,21 @@ app.get("/", (req, res) => { // req read info, res read info and send off
 })
 
 app.get("/goats", (req, res) => {
-    res.json(goats);
+    
+    // console.log("QUERY STUFF: ", req.query);
+
+    // extract qeuery oarams 
+    const { maxAge } =req.query;
+
+    if (maxAge) {
+        res.json(goats.filter(g => g["age"] <= maxAge));
+    } else {
+        res.json(goats);
+    }
+
 })
 
+// root / endpoint
 app.get("/goats/:id", (req, res) => {
 
     // console.log(req.oarams);

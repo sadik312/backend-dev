@@ -1,19 +1,19 @@
 const goats = [       
         {
         "id": 1,
-        "name": "billy",
+        "name": "Billy",
          "age": 6,
          "sex": "M",
          "favColour": "Magenta"},
         {
         "id": 2,
-        "name": "Sam",
+        "name": "Beerhonica",
          "age": 6,
          "sex": "F",
          "favColour": "Green"},
         {
         "id": 3,
-        "name": "Bob",
+        "name": "Ezekiel",
          "age": 6,
          "sex": "M",
          "favColour": "Yellow"}];

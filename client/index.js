@@ -14,6 +14,15 @@ function createGoatCard(goat) {
     header.textContent = goat["name"];
     card.appendChild(header);
 
+    // create element to display fav colour
+    const colourBox = document.createElement("p");
+    colourBox.textContent = `${["name"]}'s favourite colour is `;
+    const colourName = document.createElement("span");
+    colourName.textContent = goat["favColour"];
+    colourName.style.color = goat["favColour"];
+    colourBox.appendChild(colourName);
+    card.appendChild(colourBox);
+
     // Customise classes
     card.classList.add(goat["age"] < 5 ? "young" : "old"); // terniary operator stmnt
 

@@ -31,6 +31,7 @@ function createGoatCard(goat) {
 
 }
 
+// will be writing this over and again
 async function callTheHerd() {
 
     // Request all the goats from the API

@@ -4,6 +4,7 @@ const express = require("express"); // access to Express Library
 const cors = require("cors") // access to cors library
 
 const {goats, nextId } = require("./goats");
+const logger = require("./logger");
 
 const app = express(); // Make a very basic server using Express
 
@@ -16,10 +17,12 @@ const app = express(); // Make a very basic server using Express
 // later req -> [auth (check the req headers for a key)] -> [API] -> response
 
 app.use(cors()); // apply middleware to all files
+app.use(logger);
 
 // Endpints 
 
 app.get("/", (req, res) => { // req read info, res read info and send off
+    // console.log("/GET"); -> this is where to use middleware
     res.json({
         "message": "Welcome to the GOAT API!"
     })
